@@ -31,9 +31,9 @@ employeeName, employeeId, emailId, systemNo, systemType, systemTypetwo, unitNo, 
     }
   })
   const mailOptions = {
-    from: 'New-Ticket <it-support@example.com>',
+    from: 'New-Ticket <itsupport@objectways.com>',
     to: 'parthiban@objectways.com',
-    cc: 'parthibaneee7548@gmail.com',
+    cc: 'parthiban@objectways.com',
     subject: `New Ticket from the employee ID ${req.body.employeeId}`,
     text: `Name: ${req.body.employeeName}\nEmail: ${req.body.emailId}\nMessage: ${req.body.description}`, // plain text body
     html: `<p>Name: ${req.body.employeeName}</p><p>Email: ${req.body.emailId}</p><p>Issue: ${req.body.systemType}</p><p>Message: ${req.body.description}</p>` // html body
@@ -259,7 +259,7 @@ router.post('/send-email', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'IT-Support <it-support@example.com>', // replace with your Gmail address
+    from: 'IT-Support <itsupport@objectways.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
@@ -314,7 +314,7 @@ router.post('/send-emailhr', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'HRM <it-support@example.com>', // replace with your Gmail address
+    from: 'HRM <hrm@objectways.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
@@ -368,7 +368,7 @@ router.post('/send-emailtc', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'Facility-Support <it-support@example.com>', // replace with your Gmail address
+    from: 'Facility-Support <loganathanvenkatesh@objectways.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
