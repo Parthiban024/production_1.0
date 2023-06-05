@@ -31,7 +31,7 @@ employeeName, employeeId, emailId, systemNo, systemType, systemTypetwo, unitNo, 
     }
   })
   const mailOptions = {
-    from: `${req.body.employeeName}`,
+    from: `${employeeName}`,
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
     subject: `New Ticket from the employee ID ${req.body.employeeId}`,
