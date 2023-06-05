@@ -67,10 +67,10 @@ employeeName, employeeId, emailId, systemNo, systemType, systemTypetwo, unitNo, 
     }
   })
   const mailOptions = {
-    from: `${employeeName}`,
+    from: `Employee ID ${req.body.employeeId}`,
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
-    subject: `New Ticket from ${req.body.employeeName}`,
+    subject: `New Ticket from the employee ID ${req.body.employeeId}`,
     text: `Name: ${req.body.employeeName}\nEmail: ${req.body.emailId}\nMessage: ${req.body.description}`, // plain text body
     html: `<p>Name: ${req.body.employeeName}</p><p>Email: ${req.body.emailId}</p><p>Issue: ${req.body.systemType}</p><p>Message: ${req.body.description}</p>` // html body
   }
@@ -112,10 +112,10 @@ app.post('/api/timechamp', (req, res) => {
     }
   })
   const mailOptions = {
-    from: `${employeeIdTwo}`,
+    from: `Team Name ${req.body.systemTypeTwo}`,
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
-    subject: `New Ticket from ${req.body.systemTypeTwo}`,
+    subject: `New Ticket from the team ${req.body.systemTypeTwo}`,
     text: `Team Name: ${req.body.systemTypeTwo}\nTeam Manager: ${req.body.systemNoTwo}\nMessage: ${req.body.descriptionTwo}`, // plain text body
     html: `<p>Team Name: ${req.body.systemTypeTwo}</p><p>Team Manager: ${req.body.systemNoTwo}</p><p>Issue: ${req.body.priorityTwo}</p><p>Message: ${req.body.descriptionTwo}</p>` // html body
   }
@@ -160,12 +160,12 @@ app.post('/api/hrreview', (req, res) => {
     }
   })
   const mailOptions = {
-    from: `${employeeNameThree}`,
+    from: `Employee ID ${req.body.employeeNameThree}`,
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
-    subject: `New Ticket from ${req.body.employeeNameThree}`,
-    text: `Name: ${req.body.employeeNameThree}\nEmail: ${req.body.employeeIdThree}\nMessage: ${req.body.descriptionThree}`, // plain text body
-    html: `<p>Name: ${req.body.employeeNameThree}</p><p>Email: ${req.body.employeeIdThree}</p><p>Issue: ${req.body.systemTypeThree}</p><p>Message: ${req.body.descriptionTwo}</p>` // html body
+    subject: `New Ticket from the employee ID ${req.body.employeeNameThree}`,
+    text: `Name: ${req.body.systemNoThree}\nEmail: ${req.body.employeeIdThree}\nMessage: ${req.body.descriptionThree}`, // plain text body
+    html: `<p>Name: ${req.body.systemNoThree}</p><p>Email: ${req.body.employeeIdThree}</p><p>Issue: ${req.body.systemTypeThree}</p><p>Message: ${req.body.descriptionTwo}</p>` // html body
   }
   transpoter.sendMail(mailOptions, function (error, info) {
     if (err) {
