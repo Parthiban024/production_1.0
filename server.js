@@ -67,7 +67,7 @@ employeeName, employeeId, emailId, systemNo, systemType, systemTypetwo, unitNo, 
     }
   })
   const mailOptions = {
-    from: `${employeeName}`,
+    from: 'New-Ticket <it-support@example.com>',
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
     subject: `New Ticket from the employee ID ${req.body.employeeId}`,
@@ -112,7 +112,7 @@ app.post('/api/timechamp', (req, res) => {
     }
   })
   const mailOptions = {
-    from: `Team Name ${req.body.systemTypeTwo}`,
+    from: 'New-Ticket <it-support@example.com>',
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
     subject: `New Ticket from the team ${req.body.systemTypeTwo}`,
@@ -160,7 +160,7 @@ app.post('/api/hrreview', (req, res) => {
     }
   })
   const mailOptions = {
-    from: `Employee ID ${req.body.employeeNameThree}`,
+    from: 'New-Ticket <it-support@example.com>',
     to: 'parthiban@objectways.com',
     cc: 'parthibaneee7548@gmail.com',
     subject: `New Ticket from the employee ID ${req.body.employeeNameThree}`,
@@ -298,7 +298,7 @@ app.post('/api/send-email', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'parthibaneee7548@gmail.com', // replace with your Gmail address
+    from: 'IT-Support <it-support@example.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
@@ -353,7 +353,7 @@ app.post('/api/send-emailhr', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'parthibaneee7548@gmail.com', // replace with your Gmail address
+    from: 'HRM <it-support@example.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
@@ -407,7 +407,7 @@ app.post('/api/send-emailtc', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'parthibaneee7548@gmail.com', // replace with your Gmail address
+    from: 'Facility-Support <it-support@example.com>', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
