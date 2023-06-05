@@ -298,7 +298,7 @@ app.post('/api/send-email', (req, res) => {
   });
 
   const mailOptions = {
-    from: 'parthibaneee7548@gmail.com', // replace with your Gmail address
+    from: 'IT-Support', // replace with your Gmail address
     to: emailData.to,
     subject: emailData.subject,
     text: emailData.text
